@@ -57,7 +57,7 @@ def scrape():
             clinicUrl = clinicText.find_all("a", href=True)[0]["href"]
             clinicMeta = clinic.find_all("div", attrs={"class": "fl-post-meta"})[0]
             clinicAddress = clinicMeta.find_all("p")[0].text.strip()
-            clinicPostalCode = clinicAddress[-6:]   
+            clinicPostalCode = clinicAddress[-6:]
             clinicCoordinates = geocode(clinicPostalCode)
             clinicFooter = clinic.find_all("div", {"class": "rmg-post-footer"})[0]
             clinicServices = []
