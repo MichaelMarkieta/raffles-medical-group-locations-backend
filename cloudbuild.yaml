@@ -30,7 +30,9 @@ steps:
     '${_REGION}',
     '--port',
     '${_PORT}',
-    '--allow-unauthenticated'
+    '--allow-unauthenticated',
+    '--timeout',
+    '10m'
   ]
 substitutions:
   _REGION: 'asia-southeast1'
